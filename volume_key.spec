@@ -6,7 +6,7 @@
 
 Name:          volume_key
 Version:       0.3.12
-Release:       2
+Release:       3
 Summary:       A library used in case of volume key forgetting, and other associated tools.
 License:       GPLv2 and (MPLv1.1 or GPLv2)
 URL:           https://pagure.io/volume_key
@@ -98,5 +98,8 @@ ldconfig
 %{python_path}/__pycache__/%{name}.*
 
 %changelog
+* Tue Aug 18 2020 smileknife<jackshan2010@aliyun.com> - 0.3.12-3
+- update release for rebuilding
+
 * Tue Sep 10 2019 huzhiyu<huzhiyu1@huawei.com> - 0.3.12-2
 - Package init
