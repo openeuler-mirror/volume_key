@@ -6,13 +6,14 @@
 
 Name:          volume_key
 Version:       0.3.12
-Release:       2
+Release:       3
 Summary:       A library used in case of volume key forgetting, and other associated tools.
 License:       GPLv2 and (MPLv1.1 or GPLv2)
 URL:           https://pagure.io/volume_key
 Source0:       https://releases.pagure.org/volume_key/%{name}-%{version}.tar.xz
 
 BuildRequires: cryptsetup-luks-devel gettext-devel glib2-devel gnupg2 gpgme-devel libblkid-devel nss-devel python3-devel nss-tools
+BuildRequires: gcc
 Requires:      gnupg2 nss nss-util nspr
 Provides:      %{name}-libs
 Obsoletes:     %{name}-libs
@@ -98,5 +99,8 @@ ldconfig
 %{python_path}/__pycache__/%{name}.*
 
 %changelog
+* Fri May 28 2021 yangzhuangzhuang<yangzhuangzhuang1@huawei.com> - 0.3.12-3
+- The "no acceptable C compiler found" error message is displayed during compilation.Therefore,add buildrequires gcc.
+
 * Tue Sep 10 2019 huzhiyu<huzhiyu1@huawei.com> - 0.3.12-2
 - Package init
